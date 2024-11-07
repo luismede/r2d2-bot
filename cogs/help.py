@@ -2,12 +2,12 @@ import discord
 from discord.ext import commands
 from datetime import datetime
 
-class Help_commands(commands.Cog):
+class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command(name='h', h="Show available commands")
-    async def help_command(self, ctx):
+    async def help(self, ctx):
         embed = discord.Embed(
             title='Help Command',
             description='List of available commands and their usage',
@@ -25,4 +25,4 @@ class Help_commands(commands.Cog):
         await ctx.send(embed=embed)
 
 async def setup(bot):
-    await bot.add_cog(Help_commands(bot))
+    await bot.add_cog(Help(bot))

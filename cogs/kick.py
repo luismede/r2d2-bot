@@ -5,7 +5,6 @@ from discord.ext.commands import CheckFailure
 class Kick(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
-    super().__init__()
   
   @commands.command(pass_context=True, name='kick')
   @commands.has_permissions(manage_roles=True, kick_members=True)
