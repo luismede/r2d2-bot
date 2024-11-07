@@ -1,8 +1,9 @@
+# ENV
 bot-env
 
-__pycache__
+# Caches
 __pycache__
 */__pycache__
 
-.env
-calc*
+# Secret Token
+config.json
